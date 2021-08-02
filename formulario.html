@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <link rel="stylesheet" type="text/css" href="formulario-style.css">
+            <link rel="stylesheet" type="text/css" href="./email-style.css">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;700&display=swap" rel="stylesheet">
+            <script src="../index/js.js"></script>
+            <script src="jquery-3.6.0.js" type="text/javascript"></script>
+            <script src="jquery.js"></script>
+
+            <link rel="shortcut icon" href="fotos/bg e icones/favicon.ico">
+            
+            <title>LauraChristyDesign</title>
+        </head>
+
+        <body>
+            <header id="header">
+                <div class="menu-container">            
+                    <a id="logo" class="menu-logo" href="index.html"><img src="../index/fotos/logo1.svg" alt="Logo"></a>
+                    <nav class="menu2nav" id="nav">
+                      <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                          <span id="hamburger"></span>
+                     </button>
+                        <ul id="menu" role="menu">
+                                    <li><a href="#formularioSCROLL">Formulário</li></a>
+                                    <li><a href="bitcoin.html">Bitcoin</li></a>
+                                    <li><a href="projeto.hmtl.html">Projetos</li></a>
+                                    <li><a href="index.hmtl.html">Voltar</li></a>
+                                </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <script>
+                const btnMobile = document.getElementById('btn-mobile');
+
+                  function toggleMenu(event) {
+                  if (event.type === 'touchstart') event.preventDefault();
+                  const nav = document.getElementById('nav');
+                  nav.classList.toggle('active');
+                  const active = nav.classList.contains('active');
+                  event.currentTarget.setAttribute('aria-expanded', active);
+                  if (active) {
+                      event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+                  } else {
+                      event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+                  }
+                  }
+
+                  btnMobile.addEventListener("click", toggleMenu);
+                  btnMobile.addEventListener('touchstart', toggleMenu);
+
+                  function abrirModal() {
+                        document.getElementById('modal-email').style.top = "0";
+                    }
+                    function fecharModal() {
+                        document.getElementById('modal-email').style.top =" -200%";
+                    }
+
+            </script>
+
+                <main class="formulario-texto">
+                    <div>
+                        <h1>Formulário</h1>
+                            <p>Após responder o formulário, encaminharei a proposta de orçamento no seu e-mail o mais rápido possível.
+                            </p>
+                    </div>
+                </main>
+                <section class="formulario" id="formularioSCROLL" >
+                    <div>
+                        <iframe 
+                          id="JotFormIFrame-202090306448045"
+                          title="Formulário"
+                          onload="window.parent.scrollTo(0,0)"
+                          allowtransparency="true"
+                          allowfullscreen="true"
+                          allow="geolocation; microphone; camera"
+                          src="https://form.jotform.com/202095194279057"
+                          frameborder="0"
+                          style="
+                          
+                          min-width: 100%;
+                          height:100vh;
+                          border:none;"
+                          scrolling="no"
+
+                        
+                        >
+                        </iframe>
+                        
+                    </div>
+                </section>
+
+                <section>
+                    <div>
+
+                    </div>
+                </section>
+
+            <!--    <section class="contato anime" id="contatoScroll">
+                
+                    <div class="contato-container">
+    
+                        <h2>Contato</h2>
+                        <p>Eu entendo que cada projeto tem necessidades particulares, por isso
+                            não posso ter um valor fixo.</div>
+                            
+                            <div  id="separete"></div>
+                    </div>
+                    <div class="btn-line">
+                        <div id="botao"><a class="btn btn-fotos" href="https://www.instagram.com/laurachristydesign/" target="_blank" title="Abrir minha página no Instagram" rel=”noopener”>@laurachristydesign<img id="formulario-foto-btn" src="../index/fotos/insta.svg" alt="Instagram"></a></div>
+                        <div id="botao"><a class="btn btn-fotos" href="http://wa.me/message/VDLMRDJ2K77CN1" target="_blank" title="Enviar mensagem no Whatsapp" rel=”noopener”>+55 (65) 8169-1959<img id="bitcoin-foto-btn" src="../index/fotos/zap.svg" alt="Whatsapp"></a></div>
+                        <div id="botao" onclick="abrirModal()"><a class="btn btn-fotos email-texto" href="#contatoScroll">contato@laurachristydesign.com<img id="bitcoin-foto-btn" src="../index/fotos/email.svg"alt="E-mail"></a></div>
+                </section>-->
+
+
+                <footer class="footer">
+                    <div class="footer-container">
+                        <div>
+                            <p>Alguns direitos reservados ©<a href="https://www.mises.org.br/Ebook.aspx?id=29" target="_blank">.</a>
+                            </p>
+                        </div>
+            
+                        <div id="direitosreservados">
+                            <a href="https://www.mises.org.br/Ebook.aspx?id=29" target="_blank">
+            
+                                Alguns direitos reservados ©.
+            
+                            </a>
+                        </div>
+                        <a href="#">
+                            <div class="btnback">
+                                voltar ao topo
+                            </div>
+                        </a>
+                    </div>
+                </footer>
+                
+                <section id="modal-email">
+                    <div class="email-container">
+                        <button class="btn-fechar" onclick="fecharModal()">X</button>
+                        <h3>Formulário de contato</h3>
+                        <form class="form" method="POST" action="./php.php">
+                            <input class="email-campo" name="name" id="name" placeholder="Nome">
+                            <input class="email-campo" name="email" id="email" placeholder="E-mail">
+                            <textarea class="email-campo" name="message" id="message" placeholder="Digite a sua mensagem aqui..."></textarea>
+                            <input class="email-campo btn" type="submit" value= "Enviar" style="cursor: pointer;">
+                        </form>
+                    </div>
+                </section>
+    </body>            

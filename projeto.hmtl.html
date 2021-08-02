@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <!--Básico-->
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="shortcut icon" href="fotos/bg e icones/favicon.ico">
+
+            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+            <link rel="stylesheet" type="text/css" href="estilo-projeto.css">
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;700&display=swap" rel="stylesheet">
+            <script src="../test/jsjs.js"></script>
+
+            <title>LauraChristyDesign - Projetos</title>
+            
+        </head>
+        <body>
+            <header id="header" class="header">  
+                <div class="menu-container">            
+                    <a id="logo" class="menu-logo" href="index.html"><img src="../index/fotos/logo1.svg" alt="Logo"></a>
+                    <nav class="menu2nav" id="nav">
+                      <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                          <span id="hamburger"></span>
+                     </button>
+                        <ul id="menu" role="menu">
+                                    
+                                    
+                                    
+                                    <li><a href="#projetoSCROLL">Projetos</li></a>
+                                    <li><a href="formulario.html">Orçamento</li></a>
+                                    <li><a href="./index.html">Voltar</li></a>
+                                </ul>
+                    </div>
+                </nav>
+            </header>
+
+          <script>
+              /* Menu Mobile*//* Menu Mobile*//* Menu Mobile*//* Menu Mobile*/
+              const btnMobile = document.getElementById('btn-mobile');
+
+                function toggleMenu(event) {
+                if (event.type === 'touchstart') event.preventDefault();
+                const nav = document.getElementById('nav');
+                nav.classList.toggle('active');
+                const active = nav.classList.contains('active');
+                event.currentTarget.setAttribute('aria-expanded', active);
+                if (active) {
+                    event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+                } else {
+                    event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+                }
+                }
+
+                btnMobile.addEventListener("click", toggleMenu);
+                btnMobile.addEventListener('touchstart', toggleMenu);
+                /* Fim Menu Mobile*//* Fim Menu Mobile*//*Fim  Menu Mobile*//* Fim Menu Mobile*/
+
+
+
+                /*Menu fixo*//*Menu fixo*//*Menu fixo*//*Menu fixo*//*Menu fixo*/
+                $(window).scroll(function() {    
+                var scroll = $(window).scrollTop();
+                if (scroll >= 540) {               // se rolar 40px ativa o evento
+                    $("#header").addClass("menuFixo");    //coloca a classe "ativo" no id=menu
+                } else {
+                    $("#header").removeClass("menuFixo"); //se for menor que 40px retira a classe "ativo" do id=menu
+                }
+                });
+  </script>
+
+            <main>
+
+                <div class="projeto-titulo has-shown">
+                    <h1>Projetos desenvolvidos</h1>
+
+                    <p>
+                        Cada projeto é feito com amor e dedicação
+                    </p>
+                </div>
+
+                <section class="projeto" id="projetoSCROLL">
+                
+                    <div class="projeto-container has-shown">
+                        <div class="projeto-box-container"> 
+
+                            <!--Larissa Gomes Pisicologa-->     
+                            <div class="titulos-projetos">
+
+                                    <h2>Larissa Gomes</h2> 
+                                    <span>pisicologia</span>
+                                    
+                                <div class="ct-imagem" id="box-6">
+                                    <a title ="veja cada detalhe de" href="./projeto dos clientes/larrisagomes/larrisagomes.html">
+                                        <img class="img frente" src="./fotos/fotos-apresentação-projeto/larissa.png"alt="Sexto projeto">
+                                        <img class="img tras" src="./fotos/fotos-apresentação-projeto/larissa 2.png"alt="Sexto projeto">
+                                
+                                    </div>
+                                </a>
+
+                                        <p>Larissa Gomes é uma marca que se destaca na profissão, tanto 
+                                            presencialmente quanto no meio digital, é moderna e ao 
+                                            mesmo tempo delicada e sensível para conseguir transmitir seu profissionalismo e 
+                                            gerar confiança, que é essencial na sua área.</p>
+
+                                <a href="./projeto dos clientes/larrisagomes/larrisagomes.html" class="btn">veja cada detalhe</a>
+
+                            </div>   
+
+                            <!--Gabriela Savy dentista-->     
+                            <div class="titulos-projetos">
+
+                                    <h2>Gabriela Savy</h2> 
+                                    <span>cirurgiã dentista</span>
+                                    
+                                <div class="ct-imagem" id="box-6">
+                                    <a title ="veja cada detalhe de" href="./projeto dos clientes/gabrielasavy/gabrielasavy.html">
+                                        <img class="img frente" src="./fotos/fotos-apresentação-projeto/Gabriela (2).png"alt="Sexto projeto">
+                                        <img class="img tras" src="./fotos/fotos-apresentação-projeto/Gabriela (1).png"alt="Sexto projeto">
+                                
+                                    </div>
+                                </a>
+
+                                        <p>Jovem profissional que sente prazer em devolver sorrisos para as pessoas, bem-estar,
+                                            auto-estima e cuidado.
+                                            Tem como missão promover saúde através de atendimento de excelência com ética
+                                            profissional focada na qualidade de vida das pessoas.</p>
+
+                                <a href="./projeto dos clientes/gabrielasavy/gabrielasavy.html" class="btn">veja cada detalhe</a>
+                                
+                            </div>   
+
+                            <!--Cilene advogada-->     
+                            <div class="titulos-projetos">
+
+                                <h2>Cilene Assunção</h2> 
+                                <span>advocacia</span>
+                                
+                            <div class="ct-imagem" id="box-6">
+                                <a title ="veja cada detalhe de" href="./projeto dos clientes/cilenegomes/cilenegomes.html">
+                                    <img class="img frente" src="./fotos/fotos-apresentação-projeto/cilene 1.png"alt="Sexto projeto">
+                                    <img class="img tras" src="./fotos/fotos-apresentação-projeto/cilene 2.png"alt="Sexto projeto">
+                                </a>
+                            </div>
+                            
+
+                                    <p>Larissa Gomes é uma marca que se destaca na profissão, tanto 
+                                        presencialmente quanto no meio digital, é moderna e ao 
+                                        mesmo tempo delicada e sensível para conseguir transmitir seu profissionalismo e 
+                                        gerar confiança, que é essencial na sua área.</p>
+
+                            <a href="./projeto dos clientes/cilenegomes/cilenegomes.html" class="btn">veja cada detalhe</a>
+                            
+                        </div>   
+
+                         <!---->     
+                            <div class="titulos-projetos">
+
+                                    <h2>Larissa Gomes</h2> 
+                                    <span>pisicologia</span>
+                                    
+                                <div class="ct-imagem" id="box-6">
+                                    <a title ="veja cada detalhe de" href="./projeto dos clientes/larrisagomes/larrisagomes.html">
+                                        <img class="img frente" src="../index/fotos/fotos-apresentação-projeto/larissa.png"alt="Sexto projeto">
+                                        <img class="img tras" src="../index/fotos/fotos-apresentação-projeto/larissa 2.png"alt="Sexto projeto">
+                                
+                                    </div>
+                                </a>
+
+                                        <p>Larissa Gomes é uma marca que se destaca na profissão, tanto 
+                                            presencialmente quanto no meio digital, é moderna e ao 
+                                            mesmo tempo delicada e sensível para conseguir transmitir seu profissionalismo e 
+                                            gerar confiança, que é essencial na sua área.</p>
+
+                                <a href="./projeto dos clientes/larrisagomes/larrisagomes.html" class="btn">veja cada detalhe</a>
+                                
+                            </div>   
+
+                         <!---->     
+                            <div class="titulos-projetos">
+
+                                    <h2>Larissa Gomes</h2> 
+                                    <span>pisicologia</span>
+                                    
+                                <div class="ct-imagem" id="box-6">
+                                    <a title ="veja cada detalhe de" href="./projeto dos clientes/larrisagomes/larrisagomes.html">
+                                        <img class="img frente" src="../index/fotos/fotos-apresentação-projeto/larissa.png"alt="Sexto projeto">
+                                        <img class="img tras" src="../index/fotos/fotos-apresentação-projeto/larissa 2.png"alt="Sexto projeto">
+                                
+                                    </div>
+                                </a>
+
+                                        <p>Larissa Gomes é uma marca que se destaca na profissão, tanto 
+                                            presencialmente quanto no meio digital, é moderna e ao 
+                                            mesmo tempo delicada e sensível para conseguir transmitir seu profissionalismo e 
+                                            gerar confiança, que é essencial na sua área.</p>
+
+                                <a href="./projeto dos clientes/larrisagomes/larrisagomes.html" class="btn">veja cada detalhe</a>                                
+                            </div>   
+        
+                            
+                                <!---->     
+                                <div class="titulos-projetos">
+
+                                    <h2>Larissa Gomes</h2> 
+                                    <span>pisicologia</span>
+                                    
+                                <div class="ct-imagem" id="box-6">
+                                    <a title ="veja cada detalhe de" href="./projeto dos clientes/larrisagomes/larrisagomes.html">
+                                        <img class="img frente" src="../index/fotos/fotos-apresentação-projeto/larissa.png"alt="Sexto projeto">
+                                        <img class="img tras" src="../index/fotos/fotos-apresentação-projeto/larissa 2.png"alt="Sexto projeto">
+                                
+                                    </div>
+                                </a>
+
+                                        <p>Larissa Gomes é uma marca que se destaca na profissão, tanto 
+                                            presencialmente quanto no meio digital, é moderna e ao 
+                                            mesmo tempo delicada e sensível para conseguir transmitir seu profissionalismo e 
+                                            gerar confiança, que é essencial na sua área.</p>
+
+                                    <a href="./projeto dos clientes/larrisagomes/larrisagomes.html" class="btn">veja cada detalhe</a>                       
+                                </div>                                                   
+                    </div>
+            </main>
+
+
+    <!--Footer-->
+    <!--Footer-->
+    <!--Footer-->
+    <!--Footer-->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <p>Alguns direitos reservados <a href="https://www.mises.org.br/Ebook.aspx?id=29" target="_blank">©.</a>
+                </p>
+            </div>
+
+            <div id="direitosreservados">
+                <a href="https://www.mises.org.br/Ebook.aspx?id=29" target="_blank">
+
+                    Alguns direitos reservados ©.
+
+                </a>
+            </div>
+            <a href="#">
+                <div class="btnback">
+                    voltar ao topo
+                </div>
+            </a>
+        </div>
+    </footer>
+        </body>
